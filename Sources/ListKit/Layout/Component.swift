@@ -25,7 +25,7 @@ extension Component {
         hasher.combine(id)
     }
     
-    static func == (lhs: Self, rhs: Self) -> Bool {
+    public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.id == rhs.id
     }
     
