@@ -33,7 +33,7 @@ public protocol SupplementaryComponent:
     
     associatedtype Content
     
-    var id: Int { get set }
+    var id: AnyHashable { get set }
     var kind: SupplementaryComponentKind { get }
     
     func contentView() -> Content

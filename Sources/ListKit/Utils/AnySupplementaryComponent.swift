@@ -9,7 +9,7 @@ import UIKit
 
 public struct AnySupplementaryComponent: SupplementaryComponent, Equatable {
     
-    public var id: Int = UUID().hashValue
+    public var id: AnyHashable = UUID()
     
     public static func == (lhs: AnySupplementaryComponent, rhs: AnySupplementaryComponent) -> Bool {
         return lhs.kindValue == rhs.kindValue
