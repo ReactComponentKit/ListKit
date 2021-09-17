@@ -96,11 +96,9 @@ public class ComposeRenderer {
     }
     
     private func applySnapshotIfDiffableDatasource(animated: Bool) {
-        if let compose = self.compose {
-            if let diffable = dataSource as? DiffableDataSource {
-                diffable.layout = compose
-                diffable.applySnapshot(animated: animated)
-            }
+        if let compose = self.compose, let diffable = dataSource as? DiffableDataSource {
+            diffable.layout = compose
+            diffable.applySnapshot(animated: animated)
         }
     }
 }
