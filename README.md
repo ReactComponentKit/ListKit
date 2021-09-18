@@ -311,6 +311,26 @@ class ComplexLayoutViewController: BaseViewController {
 }
 ```
 
+## Installation
+
+ListKit only support Swift Package Manager. 
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/ReactComponentKit/ListKit.git", from: "1.0.0"),
+]
+```
+
+## Requirements
+
+- Swift 5.4+
+  - ListKit uses @resultBuilder which is available after Swift 5.4.
+- Xcode 12.+
+
+## Inspired by and Respect
+
+- [Carbon](https://github.com/ra1028/Carbon)
+  - Carbon is the awesome library for building user interfaces in UITableView and UICollectionView. It provides declarative and component-based way to buiild UI much like SwiftUI. I learned many thing from Carbon to make ListKt. I want to give huge thanks to Carbon.
 
 ## API reference
 
