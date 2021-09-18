@@ -275,7 +275,7 @@ TodoDataSource is inherited from DiffableDataSource and customize it to use Swip
 
 ## Iterable Data
 
-ListKit provices `render(of: [T])`, `HGroup(of: [T])` and `VGroup(of: [T])` to define dynamic layout.
+ListKit provides `render(of: [T])`, `HGroup(of: [T])` and `VGroup(of: [T])` to handle iterable data and define dynamic layout with that data.
 
 ```swift
 class ComplexLayoutViewController: BaseViewController {
@@ -337,7 +337,7 @@ dependencies: [
 ## Inspired by and Respect
 
 - [Carbon](https://github.com/ra1028/Carbon)
-  - Carbon is the awesome library for building user interfaces in UITableView and UICollectionView. It provides declarative and component-based way to buiild UI much like SwiftUI. I learned many thing from Carbon to make ListKt. I want to give huge thanks to Carbon.
+  - Carbon is the awesome library for building user interfaces in UITableView and UICollectionView. It provides declarative and component-based way to buiild UI much like SwiftUI. I learned many things from Carbon to make ListKt. I want to give huge thanks to Carbon and respect it.
 
 ## API reference
 
