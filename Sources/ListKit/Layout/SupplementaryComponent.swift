@@ -30,20 +30,39 @@ public enum SupplementaryComponentKind {
 public protocol SupplementaryComponent:
     NSCollectionLayoutSupplementaryItemConvertible,
     NSCollectionLayoutBoundarySupplementaryItemConvertible {
-    
+    /// Component's content view which is inherited from UIView.
     associatedtype Content
     
+    /// Component's unique ID
     var id: AnyHashable { get set }
+    
+    /// A string that identifies the type of supplementary item.
     var kind: SupplementaryComponentKind { get }
     
+    /// return component's content view instance
     func contentView() -> Content
+    
+    /// The component's size expressed in width and height dimensions.
     func layoutSize() -> NSCollectionLayoutSize
+    
+    /// The anchor between the supplementary component and the container it's attached to.
     func containerAnchor() -> NSCollectionLayoutAnchor
+    
+    /// The anchor between the supplementary component and the component it's attached to.
     func itemAnchor() -> NSCollectionLayoutAnchor
+    
+    /// he amount of space added around the boundaries of the item between other components and this component's container.
     func edgeSpacing() -> NSCollectionLayoutEdgeSpacing?
+    
+    /// The amount of space added around the content of the component to adjust its final size after its position is computed.
     func contentInsets() -> NSDirectionalEdgeInsets
+    
+    /// Render data to component's content view
     func render(in content: Content)
     
+    /// The vertical stacking order of the supplementary item in relation to other items in the section.
+    func zIndex() -> Int
+
     /// used for boundarySupplementary type
     /// A Boolean value that indicates whether a header or footer is pinned to the top or bottom visible boundary of
     /// the section or layout it's attached to.
@@ -112,6 +131,7 @@ extension SupplementaryComponent {
         let item = NSCollectionLayoutSupplementaryItem(layoutSize: layoutSize(), elementKind: kindValue, containerAnchor: containerAnchor(), itemAnchor: itemAnchor())
         item.edgeSpacing = edgeSpacing()
         item.contentInsets = contentInsets()
+        item.zIndex = zIndex()
         return item
     }
     
@@ -122,11 +142,6 @@ extension SupplementaryComponent {
                                                                absoluteOffset: offset())
         item.extendsBoundary = extendsBoundary()
         item.pinToVisibleBounds = pinToVisibleBounds()
-        return item
-    }
-    
-    public func toNSCollectionLayoutDecorationItem() -> NSCollectionLayoutDecorationItem {
-        let item = NSCollectionLayoutDecorationItem.background(elementKind: kindValue)
         item.zIndex = zIndex()
         return item
     }

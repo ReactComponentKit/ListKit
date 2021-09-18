@@ -24,10 +24,7 @@ public struct Section: Hashable {
     internal let nsSection: NSCollectionLayoutSection
     /// components that are contained in this section
     internal var components: [AnyComponentWrapper] = []
-    
-    ///
-    internal var decorationComponents: [AnyClass] = []
-    
+        
     public init<ID: Hashable>(id: ID, @GroupBuilder group: () -> GroupBuilderResult) {
         self.id = id
         let result = group()
@@ -88,7 +85,7 @@ public struct Section: Hashable {
         return self
     }
     
-    /// An array of the supplementary items that are associated with the boundary edges of the section, such as headers and footers.
+    /// A supplementary item that it associated with the boundary edges of the section, such as headers and footers.
     public func boundarySupplementaryItem<S: SupplementaryComponent>(_ value: S) -> Section {
         SupplementaryComponentManager.shared.append(value)
         let item = value.toNSCollectionLayoutBoundarySupplementaryItem()
@@ -96,7 +93,7 @@ public struct Section: Hashable {
         return self
     }
     
-    /// An array of the decoration items that are anchored to the section, such as background decoration views.
+    /// A decoration item that it anchored to the section, such as background decoration views.
     public func decorationItem<D: DecorationComponent>(_ value: D) -> Section {
         SupplementaryComponentManager.shared.append(value)
         let item = value.toNSCollectionLayoutDecorationItem()

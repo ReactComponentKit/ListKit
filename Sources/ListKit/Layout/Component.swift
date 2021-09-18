@@ -8,14 +8,21 @@
 import UIKit
 
 public protocol Component: NSCollectionLayoutItemsConvertible, Hashable {
-    // 컴포넌트와 연결된 컨텐트 뷰
+    /// Component's content view which is inherited from UIView.
     associatedtype Content
+    /// Component's unique ID
     var id: AnyHashable { get }
+    /// return component's content view instance
     func contentView() -> Content
+    /// The component's size expressed in width and height dimensions.
     func layoutSize() -> NSCollectionLayoutSize
+    /// The amount of space added around the boundaries of the item between other components and this component's container.
     func edgeSpacing() -> NSCollectionLayoutEdgeSpacing?
+    /// The amount of space added around the content of the component to adjust its final size after its position is computed.
     func contentInsets() -> NSDirectionalEdgeInsets
+    /// An array of the supplementary items attached to the component.
     func supplementComponents() -> [AnySupplementaryComponent]
+    /// Render data to component's content view
     func render(in content: Content)
 }
 
