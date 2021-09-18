@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
+open class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
     public var layout: ComposeLayout?
     public weak var collectionView: UICollectionView?
     
@@ -23,6 +23,7 @@ public class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListKitCell.className, for: indexPath)
+        configure(cell: cell)
         if let wrapper = layout?.sections[indexPath.section].components[indexPath.item], let contentView = wrapper.component.contentView() as? UIView {
             cell.contentView.viewWithTag(Int.max)?.removeFromSuperview()
             contentView.tag = Int.max
@@ -63,5 +64,9 @@ public class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
             anySupplementaryComponent.render(in: contentView)
         }
         return view
+    }
+
+    open func configure(cell: UICollectionViewCell) {
+    
     }
 }

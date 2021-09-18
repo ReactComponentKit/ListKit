@@ -10,4 +10,5 @@ import UIKit
 public protocol DataSource {
     var layout: ComposeLayout? { get set }
     var collectionView: UICollectionView? { get set }
+    func configure(cell: UICollectionViewCell)
 }

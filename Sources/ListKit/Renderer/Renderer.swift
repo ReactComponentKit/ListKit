@@ -18,7 +18,7 @@ public class ComposeRenderer {
     public var target: UICollectionView? {
         didSet {
             if let target = target {
-                target.register(ListKitCell.self, forCellWithReuseIdentifier: ListKitCell.className)
+                target.register(cellClass, forCellWithReuseIdentifier: ListKitCell.className)
                 target.register(ListKitReusableView.self, forSupplementaryViewOfKind: ListKitReusableView.className, withReuseIdentifier: ListKitReusableView.className)
                 target.dataSource = dataSource as? UICollectionViewDataSource
                 target.delegate = delegate
@@ -72,10 +72,12 @@ public class ComposeRenderer {
     private var configuration: UICollectionViewCompositionalLayoutConfiguration?
     var dataSource: DataSource?
     var delegate: UICollectionViewDelegate?
-    
-    public init(dataSource: DataSource, delegate: UICollectionViewDelegate? = nil) {
+    let cellClass: AnyClass
+
+    public init(dataSource: DataSource, delegate: UICollectionViewDelegate? = nil, cellClass: AnyClass? = nil) {
         self.dataSource = dataSource
         self.delegate = delegate
+        self.cellClass = cellClass ?? ListKitCell.self
     }
     
     public func render(animated: Bool = false, @SectionBuilder sections: () -> [SectionBuilderResult]) {
