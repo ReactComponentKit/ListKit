@@ -50,6 +50,10 @@ internal struct AnyComponent: Component, Equatable {
     func render(in content: Any) {
         box.render(in: content)
     }
+
+    func to<T>(_: T.Type) -> T? {
+        return box.base as? T
+    }
 }
 
 internal protocol AnyComponentBox {
