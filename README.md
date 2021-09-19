@@ -5,7 +5,7 @@
 # ListKit
 
 ![license MIT](https://img.shields.io/cocoapods/l/ListKit.svg)
-![Platform](https://img.shields.io/cocoapods/p/ListKit.svg)
+![Platform](https://img.shields.io/badge/iOS-%3E%3D%2013.0-green.svg)
 [![Swift 5.4](https://img.shields.io/badge/Swift-5.4-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
 *DSL for UICollectionViewCompositionalLayout!*
@@ -237,7 +237,7 @@ override func render() {
 
 ## DataSource
 
-ListKit provide PlainDataSource and DiffableDataSource. PlainDataSource is used for UICollectionView that uses UICollectionViewFlowLayout. DiffableDataSource is used for UICollectionView that uses UICollectionViewDiffableDataSource and NSDiffableDataSourceSnapshot. The [emoji example](https://github.com/ReactComponentKit/ListKitExamples/tree/main/ListKitExamples/ListKitExamples/EmojiExample) and [Todo example](https://github.com/ReactComponentKit/ListKitExamples/tree/main/ListKitExamples/ListKitExamples/TodoExample) use DiffableDataSource
+ListKit provides PlainDataSource and DiffableDataSource. PlainDataSource is used for UICollectionView that uses UICollectionViewFlowLayout. DiffableDataSource is used for UICollectionView that uses UICollectionViewDiffableDataSource and NSDiffableDataSourceSnapshot. The [emoji example](https://github.com/ReactComponentKit/ListKitExamples/tree/main/ListKitExamples/ListKitExamples/EmojiExample) and [Todo example](https://github.com/ReactComponentKit/ListKitExamples/tree/main/ListKitExamples/ListKitExamples/TodoExample) use DiffableDataSource
 
 ### Customizing DataSource
 
@@ -270,7 +270,7 @@ class TodoDataSource: DiffableDataSource, SwipeCollectionViewCellDelegate {
 }
 ```
 
-TodoDataSource is inherited from DiffableDataSource and customize it to use SwipeCellKit for swift actions.
+TodoDataSource is inherited from DiffableDataSource and customize it to use SwipeCellKit for swipe actions.
 
 
 ## Iterable Data
