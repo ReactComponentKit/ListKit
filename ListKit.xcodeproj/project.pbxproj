@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"ListKit::ListKitPackageTests::ProductTarget" /* ListKitPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_93 /* Build configuration list for PBXAggregateTarget "ListKitPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_96 /* PBXTargetDependency */,
+			);
+			name = ListKitPackageTests;
+			productName = ListKitPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4E9AB97226F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AB97126F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift */; };
+		4E9AB97426F74BD800A53CBD /* ListKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AB97326F74BD800A53CBD /* ListKitDelegate.swift */; };
+		OBJ_102 /* ListKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ListKitTests.swift */; };
+		OBJ_104 /* ListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ListKit::ListKit::Product" /* ListKit.framework */; };
+		OBJ_58 /* GroupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* GroupBuilder.swift */; };
+		OBJ_59 /* ItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ItemBuilder.swift */; };
+		OBJ_60 /* SectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* SectionBuilder.swift */; };
+		OBJ_61 /* ListKitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* ListKitCell.swift */; };
+		OBJ_62 /* ListKitReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ListKitReusableView.swift */; };
+		OBJ_63 /* ComponentQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ComponentQueryable.swift */; };
+		OBJ_64 /* ComposeLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ComposeLayoutProvider.swift */; };
+		OBJ_65 /* ListKitDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ListKitDataSource.swift */; };
+		OBJ_66 /* DiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* DiffableDataSource.swift */; };
+		OBJ_67 /* PlainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* PlainDataSource.swift */; };
+		OBJ_68 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* NSObjectExtensions.swift */; };
+		OBJ_69 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ObjectAssociation.swift */; };
+		OBJ_70 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Component.swift */; };
+		OBJ_71 /* ComposeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ComposeLayout.swift */; };
+		OBJ_72 /* DecorationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* DecorationComponent.swift */; };
+		OBJ_73 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Group.swift */; };
+		OBJ_74 /* NSCollectionLayoutGroupConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* NSCollectionLayoutGroupConvertible.swift */; };
+		OBJ_75 /* NSCollectionLayoutItemsConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* NSCollectionLayoutItemsConvertible.swift */; };
+		OBJ_76 /* NSCollectionLayoutSectionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* NSCollectionLayoutSectionConvertible.swift */; };
+		OBJ_77 /* NSCollectionLayoutSupplementaryItemConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* NSCollectionLayoutSupplementaryItemConvertible.swift */; };
+		OBJ_78 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Section.swift */; };
+		OBJ_79 /* SupplementaryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* SupplementaryComponent.swift */; };
+		OBJ_80 /* ListKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ListKit.swift */; };
+		OBJ_81 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Renderer.swift */; };
+		OBJ_82 /* AnyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* AnyComponent.swift */; };
+		OBJ_83 /* AnySupplementaryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* AnySupplementaryComponent.swift */; };
+		OBJ_84 /* SupplementaryComponentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* SupplementaryComponentManager.swift */; };
+		OBJ_91 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E9AB96E26F7406E00A53CBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ListKit::ListKit";
+			remoteInfo = ListKit;
+		};
+		4E9AB96F26F7407000A53CBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ListKit::ListKitTests";
+			remoteInfo = ListKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E9AB97126F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentLifeTimeTrackingDelegate.swift; sourceTree = "<group>"; };
+		4E9AB97326F74BD800A53CBD /* ListKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKitDelegate.swift; sourceTree = "<group>"; };
+		"ListKit::ListKit::Product" /* ListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ListKit::ListKitTests::Product" /* ListKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ListKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* GroupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBuilder.swift; sourceTree = "<group>"; };
+		OBJ_11 /* ItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBuilder.swift; sourceTree = "<group>"; };
+		OBJ_12 /* SectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBuilder.swift; sourceTree = "<group>"; };
+		OBJ_14 /* ListKitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKitCell.swift; sourceTree = "<group>"; };
+		OBJ_15 /* ListKitReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKitReusableView.swift; sourceTree = "<group>"; };
+		OBJ_17 /* ComponentQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentQueryable.swift; sourceTree = "<group>"; };
+		OBJ_18 /* ComposeLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeLayoutProvider.swift; sourceTree = "<group>"; };
+		OBJ_20 /* ListKitDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKitDataSource.swift; sourceTree = "<group>"; };
+		OBJ_21 /* DiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSource.swift; sourceTree = "<group>"; };
+		OBJ_22 /* PlainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainDataSource.swift; sourceTree = "<group>"; };
+		OBJ_24 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ObjectAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		OBJ_28 /* ComposeLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeLayout.swift; sourceTree = "<group>"; };
+		OBJ_29 /* DecorationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationComponent.swift; sourceTree = "<group>"; };
+		OBJ_30 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		OBJ_31 /* NSCollectionLayoutGroupConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutGroupConvertible.swift; sourceTree = "<group>"; };
+		OBJ_32 /* NSCollectionLayoutItemsConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutItemsConvertible.swift; sourceTree = "<group>"; };
+		OBJ_33 /* NSCollectionLayoutSectionConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutSectionConvertible.swift; sourceTree = "<group>"; };
+		OBJ_34 /* NSCollectionLayoutSupplementaryItemConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCollectionLayoutSupplementaryItemConvertible.swift; sourceTree = "<group>"; };
+		OBJ_35 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		OBJ_36 /* SupplementaryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryComponent.swift; sourceTree = "<group>"; };
+		OBJ_37 /* ListKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKit.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		OBJ_41 /* AnyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyComponent.swift; sourceTree = "<group>"; };
+		OBJ_42 /* AnySupplementaryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySupplementaryComponent.swift; sourceTree = "<group>"; };
+		OBJ_43 /* SupplementaryComponentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryComponentManager.swift; sourceTree = "<group>"; };
+		OBJ_46 /* ListKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKitTests.swift; sourceTree = "<group>"; };
+		OBJ_50 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_51 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_52 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_104 /* ListKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E9AB97026F74BB800A53CBD /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4E9AB97126F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift */,
+				4E9AB97326F74BD800A53CBD /* ListKitDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* ListKitCell.swift */,
+				OBJ_15 /* ListKitReusableView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		OBJ_16 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* ComponentQueryable.swift */,
+				OBJ_18 /* ComposeLayoutProvider.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		OBJ_19 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* ListKitDataSource.swift */,
+				OBJ_21 /* DiffableDataSource.swift */,
+				OBJ_22 /* PlainDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* NSObjectExtensions.swift */,
+				OBJ_25 /* ObjectAssociation.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* Component.swift */,
+				OBJ_28 /* ComposeLayout.swift */,
+				OBJ_29 /* DecorationComponent.swift */,
+				OBJ_30 /* Group.swift */,
+				OBJ_31 /* NSCollectionLayoutGroupConvertible.swift */,
+				OBJ_32 /* NSCollectionLayoutItemsConvertible.swift */,
+				OBJ_33 /* NSCollectionLayoutSectionConvertible.swift */,
+				OBJ_34 /* NSCollectionLayoutSupplementaryItemConvertible.swift */,
+				OBJ_35 /* Section.swift */,
+				OBJ_36 /* SupplementaryComponent.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		OBJ_38 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* Renderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		OBJ_40 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_41 /* AnyComponent.swift */,
+				OBJ_42 /* AnySupplementaryComponent.swift */,
+				OBJ_43 /* SupplementaryComponentManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		OBJ_44 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* ListKitTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_45 /* ListKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_46 /* ListKitTests.swift */,
+			);
+			name = ListKitTests;
+			path = Tests/ListKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"ListKit::ListKit::Product" /* ListKit.framework */,
+				"ListKit::ListKitTests::Product" /* ListKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_44 /* Tests */,
+				OBJ_47 /* Products */,
+				OBJ_50 /* LICENSE */,
+				OBJ_51 /* README.md */,
+				OBJ_52 /* build.sh */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* ListKit */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* ListKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Builders */,
+				OBJ_13 /* Cell */,
+				OBJ_16 /* Common */,
+				OBJ_19 /* DataSource */,
+				4E9AB97026F74BB800A53CBD /* Delegate */,
+				OBJ_23 /* Extensions */,
+				OBJ_26 /* Layout */,
+				OBJ_38 /* Renderer */,
+				OBJ_40 /* Utils */,
+				OBJ_37 /* ListKit.swift */,
+			);
+			name = ListKit;
+			path = Sources/ListKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* GroupBuilder.swift */,
+				OBJ_11 /* ItemBuilder.swift */,
+				OBJ_12 /* SectionBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"ListKit::ListKit" /* ListKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_54 /* Build configuration list for PBXNativeTarget "ListKit" */;
+			buildPhases = (
+				OBJ_57 /* Sources */,
+				OBJ_85 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ListKit;
+			productName = ListKit;
+			productReference = "ListKit::ListKit::Product" /* ListKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"ListKit::ListKitTests" /* ListKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_98 /* Build configuration list for PBXNativeTarget "ListKitTests" */;
+			buildPhases = (
+				OBJ_101 /* Sources */,
+				OBJ_103 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_105 /* PBXTargetDependency */,
+			);
+			name = ListKitTests;
+			productName = ListKitTests;
+			productReference = "ListKit::ListKitTests::Product" /* ListKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"ListKit::SwiftPMPackageDescription" /* ListKitPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_87 /* Build configuration list for PBXNativeTarget "ListKitPackageDescription" */;
+			buildPhases = (
+				OBJ_90 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ListKitPackageDescription;
+			productName = ListKitPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "ListKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"ListKit::ListKit" /* ListKit */,
+				"ListKit::SwiftPMPackageDescription" /* ListKitPackageDescription */,
+				"ListKit::ListKitPackageTests::ProductTarget" /* ListKitPackageTests */,
+				"ListKit::ListKitTests" /* ListKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_101 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_102 /* ListKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_58 /* GroupBuilder.swift in Sources */,
+				OBJ_59 /* ItemBuilder.swift in Sources */,
+				4E9AB97226F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift in Sources */,
+				OBJ_60 /* SectionBuilder.swift in Sources */,
+				OBJ_61 /* ListKitCell.swift in Sources */,
+				OBJ_62 /* ListKitReusableView.swift in Sources */,
+				OBJ_63 /* ComponentQueryable.swift in Sources */,
+				OBJ_64 /* ComposeLayoutProvider.swift in Sources */,
+				OBJ_65 /* ListKitDataSource.swift in Sources */,
+				OBJ_66 /* DiffableDataSource.swift in Sources */,
+				OBJ_67 /* PlainDataSource.swift in Sources */,
+				OBJ_68 /* NSObjectExtensions.swift in Sources */,
+				OBJ_69 /* ObjectAssociation.swift in Sources */,
+				OBJ_70 /* Component.swift in Sources */,
+				OBJ_71 /* ComposeLayout.swift in Sources */,
+				OBJ_72 /* DecorationComponent.swift in Sources */,
+				OBJ_73 /* Group.swift in Sources */,
+				OBJ_74 /* NSCollectionLayoutGroupConvertible.swift in Sources */,
+				OBJ_75 /* NSCollectionLayoutItemsConvertible.swift in Sources */,
+				OBJ_76 /* NSCollectionLayoutSectionConvertible.swift in Sources */,
+				OBJ_77 /* NSCollectionLayoutSupplementaryItemConvertible.swift in Sources */,
+				OBJ_78 /* Section.swift in Sources */,
+				OBJ_79 /* SupplementaryComponent.swift in Sources */,
+				OBJ_80 /* ListKit.swift in Sources */,
+				OBJ_81 /* Renderer.swift in Sources */,
+				OBJ_82 /* AnyComponent.swift in Sources */,
+				4E9AB97426F74BD800A53CBD /* ListKitDelegate.swift in Sources */,
+				OBJ_83 /* AnySupplementaryComponent.swift in Sources */,
+				OBJ_84 /* SupplementaryComponentManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_91 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_105 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ListKit::ListKit" /* ListKit */;
+			targetProxy = 4E9AB96E26F7406E00A53CBD /* PBXContainerItemProxy */;
+		};
+		OBJ_96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ListKit::ListKitTests" /* ListKitTests */;
+			targetProxy = 4E9AB96F26F7407000A53CBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ListKit.xcodeproj/ListKitTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ListKitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ListKit.xcodeproj/ListKit_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ListKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ListKit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ListKit.xcodeproj/ListKit_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ListKit;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ListKit;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ListKit.xcodeproj/ListKitTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ListKitTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "ListKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_54 /* Build configuration list for PBXNativeTarget "ListKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_55 /* Debug */,
+				OBJ_56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_87 /* Build configuration list for PBXNativeTarget "ListKitPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_88 /* Debug */,
+				OBJ_89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_93 /* Build configuration list for PBXAggregateTarget "ListKitPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_94 /* Debug */,
+				OBJ_95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_98 /* Build configuration list for PBXNativeTarget "ListKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_99 /* Debug */,
+				OBJ_100 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}

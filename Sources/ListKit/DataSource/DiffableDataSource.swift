@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class DiffableDataSource: DataSource {
+open class DiffableDataSource: ListKitDataSource {
     public var layout: ComposeLayout?
     public weak var collectionView: UICollectionView?
     private var dataSource: UICollectionViewDiffableDataSource<Section, AnyComponent>?
@@ -22,8 +22,8 @@ open class DiffableDataSource: DataSource {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListKitCell.className, for: indexPath)
                 self?.configure(cell: cell)
                 if let wrapper = self?.layout?.sections[indexPath.section].components[indexPath.item], let contentView = wrapper.component.contentView() as? UIView {
-                    cell.contentView.viewWithTag(Int.max)?.removeFromSuperview()
-                    contentView.tag = Int.max
+                    cell.contentView.viewWithTag(ListKit.componentContentViewTag)?.removeFromSuperview()
+                    contentView.tag = ListKit.componentContentViewTag
                     cell.contentView.addSubview(contentView)
 
                     contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,8 +45,8 @@ open class DiffableDataSource: DataSource {
                 let view = collectionView.dequeueReusableSupplementaryView(ofKind: ListKitReusableView.className, withReuseIdentifier: ListKitReusableView.className, for: indexPath)
                 if let anySupplementaryComponent = SupplementaryComponentManager.shared[kind], let contentView = anySupplementaryComponent.contentView() as? UIView {
                     
-                    view.viewWithTag(Int.max)?.removeFromSuperview()
-                    contentView.tag = Int.max
+                    view.viewWithTag(ListKit.componentContentViewTag)?.removeFromSuperview()
+                    contentView.tag = ListKit.componentContentViewTag
                     view.addSubview(contentView)
                     
                     contentView.translatesAutoresizingMaskIntoConstraints = false

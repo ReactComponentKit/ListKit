@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
+open class PlainDataSource: NSObject, ListKitDataSource, UICollectionViewDataSource {
     public var layout: ComposeLayout?
     public weak var collectionView: UICollectionView?
     
@@ -25,8 +25,8 @@ open class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListKitCell.className, for: indexPath)
         configure(cell: cell)
         if let wrapper = layout?.sections[indexPath.section].components[indexPath.item], let contentView = wrapper.component.contentView() as? UIView {
-            cell.contentView.viewWithTag(Int.max)?.removeFromSuperview()
-            contentView.tag = Int.max
+            cell.contentView.viewWithTag(ListKit.componentContentViewTag)?.removeFromSuperview()
+            contentView.tag = ListKit.componentContentViewTag
             cell.contentView.addSubview(contentView)
             
             contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -48,8 +48,8 @@ open class PlainDataSource: NSObject, DataSource, UICollectionViewDataSource {
         let view = collectionView.dequeueReusableSupplementaryView(ofKind: ListKitReusableView.className, withReuseIdentifier: ListKitReusableView.className, for: indexPath)
         if let anySupplementaryComponent = SupplementaryComponentManager.shared[kind], let contentView = anySupplementaryComponent.contentView() as? UIView {
             
-            view.viewWithTag(Int.max)?.removeFromSuperview()
-            contentView.tag = Int.max
+            view.viewWithTag(ListKit.componentContentViewTag)?.removeFromSuperview()
+            contentView.tag = ListKit.componentContentViewTag
             view.addSubview(contentView)
             
             contentView.translatesAutoresizingMaskIntoConstraints = false

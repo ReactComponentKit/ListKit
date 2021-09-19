@@ -22,6 +22,10 @@ public protocol Component: NSCollectionLayoutItemsConvertible, Hashable {
     func contentInsets() -> NSDirectionalEdgeInsets
     /// An array of the supplementary items attached to the component.
     func supplementComponents() -> [AnySupplementaryComponent]
+    /// Component's content is about to be displayed in the collection view.
+    func willDisplay(content: Content)
+    /// Component's content was removed from the collection view.
+    func didEndDisplay(content: Content)
     /// Render data to component's content view
     func render(in content: Content)
 }
@@ -50,6 +54,12 @@ extension Component {
     
     public func supplementComponents() -> [AnySupplementaryComponent] {
         return []
+    }
+    
+    public func willDisplay(content: Content) {
+    }
+
+    public func didEndDisplay(content: Content) {
     }
     
     public func toNSCollectionLayoutItems() -> [NSCollectionLayoutItem] {
