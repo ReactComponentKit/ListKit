@@ -70,13 +70,13 @@ public class ComposeRenderer {
     
     var compose: ComposeLayout?
     private var configuration: UICollectionViewCompositionalLayoutConfiguration?
-    var dataSource: DataSource?
-    var delegate: UICollectionViewDelegate?
+    var dataSource: ListKitDataSource?
+    var delegate: (ListKitDelegate & UICollectionViewDelegate)
     let cellClass: AnyClass
 
-    public init(dataSource: DataSource, delegate: UICollectionViewDelegate? = nil, cellClass: AnyClass? = nil) {
+    public init(dataSource: ListKitDataSource, delegate: (ListKitDelegate & UICollectionViewDelegate)? = nil, cellClass: AnyClass? = nil) {
         self.dataSource = dataSource
-        self.delegate = delegate
+        self.delegate = delegate ?? ComponentLifeTimeTrackingDelegate()
         self.cellClass = cellClass ?? ListKitCell.self
     }
     
@@ -84,6 +84,7 @@ public class ComposeRenderer {
         let compose = ComposeLayout(configuration: configuration, sections: sections)
         self.compose = compose
         self.dataSource?.layout = self.compose
+        self.delegate.layout = self.compose
         self.target?.setCollectionViewLayout(compose.layout, animated: animated)
         applySnapshotIfDiffableDatasource(animated: animated)
     }
@@ -93,14 +94,18 @@ public class ComposeRenderer {
         let compose = ComposeLayout(configuration: configuration, of: items, builder: builder)
         self.compose = compose
         self.dataSource?.layout = self.compose
+        self.delegate.layout = self.compose
         self.target?.setCollectionViewLayout(compose.layout, animated: animated)
         applySnapshotIfDiffableDatasource(animated: animated)
     }
     
     private func applySnapshotIfDiffableDatasource(animated: Bool) {
-        if let compose = self.compose, let diffable = dataSource as? DiffableDataSource {
-            diffable.layout = compose
-            diffable.applySnapshot(animated: animated)
+        if let compose = self.compose {
+            self.delegate.layout = compose
+            if let diffable = dataSource as? DiffableDataSource {
+                diffable.layout = compose
+                diffable.applySnapshot(animated: animated)
+            }
         }
     }
 }

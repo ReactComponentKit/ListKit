@@ -324,7 +324,7 @@ ListKit only support Swift Package Manager.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ReactComponentKit/ListKit.git", from: "1.0.0"),
+    .package(url: "https://github.com/ReactComponentKit/ListKit.git", from: "1.1.0"),
 ]
 ```
 
@@ -394,6 +394,10 @@ dependencies: [
   - The amount of space added around the content of the component to adjust its final size after its position is computed.
 - `func supplementComponents() -> [AnySupplementaryComponent]`
   - An array of the supplementary items attached to the component. 
+- `func willDisplay(content: Content)`
+  - Component's content is about to be displayed in the collection view.
+- `func didEndDisplay(content: Content)`
+  - Component's content was removed from the collection view.
 - `func render(in content: Content)`
   - Render data to component's content view 
 

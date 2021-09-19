@@ -7,19 +7,19 @@
 
 import UIKit
 
-internal struct AnyComponent: Component, Equatable {
+public struct AnyComponent: Component, Equatable {
     
-    static func == (lhs: AnyComponent, rhs: AnyComponent) -> Bool {
+    public static func == (lhs: AnyComponent, rhs: AnyComponent) -> Bool {
         return lhs.id == rhs.id
     }
     
     let box: AnyComponentBox
     
-    var id: AnyHashable {
+    public var id: AnyHashable {
         return box.id
     }
     
-    init<Base: Component>(_ base: Base) {
+    public init<Base: Component>(_ base: Base) {
         if let anyComponent = base as? AnyComponent {
             self = anyComponent
         } else {
@@ -27,31 +27,39 @@ internal struct AnyComponent: Component, Equatable {
         }
     }
     
-    func contentView() -> Any {
+    public func contentView() -> Any {
         return box.contentView()
     }
     
-    func layoutSize() -> NSCollectionLayoutSize {
+    public func layoutSize() -> NSCollectionLayoutSize {
         return box.layoutSize()
     }
     
-    func edgeSpacing() -> NSCollectionLayoutEdgeSpacing? {
+    public func edgeSpacing() -> NSCollectionLayoutEdgeSpacing? {
         return box.edgeSpacing()
     }
     
-    func contentInsets() -> NSDirectionalEdgeInsets {
+    public func contentInsets() -> NSDirectionalEdgeInsets {
         return box.contentInsets()
     }
     
-    func supplementComponents() -> [AnySupplementaryComponent] {
+    public func supplementComponents() -> [AnySupplementaryComponent] {
         return box.supplementComponents()
     }
     
-    func render(in content: Any) {
+    public func willDisplay(content: Any) {
+        box.willDisplay(content: content)
+    }
+    
+    public func didEndDisplay(content: Any) {
+        box.didEndDisplay(content: content)
+    }
+    
+    public func render(in content: Any) {
         box.render(in: content)
     }
-
-    func to<T>(_: T.Type) -> T? {
+    
+    public func to<T>(_: T.Type) -> T? {
         return box.base as? T
     }
 }
@@ -64,6 +72,8 @@ internal protocol AnyComponentBox {
     func edgeSpacing() -> NSCollectionLayoutEdgeSpacing?
     func contentInsets() -> NSDirectionalEdgeInsets
     func supplementComponents() -> [AnySupplementaryComponent]
+    func willDisplay(content: Any)
+    func didEndDisplay(content: Any)
     func render(in content: Any)
 }
 
@@ -104,6 +114,16 @@ internal struct ComponentBox<Base: Component>: AnyComponentBox {
     
     func supplementComponents() -> [AnySupplementaryComponent] {
         return baseComponent.supplementComponents()
+    }
+    
+    func willDisplay(content: Any) {
+        guard let content = content as? Base.Content else { return }
+        baseComponent.willDisplay(content: content)
+    }
+    
+    func didEndDisplay(content: Any) {
+        guard let content = content as? Base.Content else { return }
+        baseComponent.didEndDisplay(content: content)
     }
     
     func render(in content: Any) {
