@@ -12,7 +12,7 @@
 
 ## About
 
-ListKit is DSL for building UICollectionViewCompositionalLayout. You can make UICollectionViewCompositionalLayout easy with ListKit. ListKit is Declarative and Component-Based. Also, ListKit supports diffable data source for UICollectionView!
+ListKit is DSL for building [UICollectionViewCompositionalLayout](https://developer.apple.com/documentation/uikit/uicollectionviewcompositionallayout). You can make UICollectionViewCompositionalLayout easy with ListKit. ListKit is Declarative and Component-Based. Also, ListKit supports diffable data source for UICollectionView!
 
 ## Examples
 
@@ -332,6 +332,7 @@ dependencies: [
 
 - Swift 5.4+
   - ListKit uses @resultBuilder which is available after Swift 5.4.
+- iOS 13.0+
 - Xcode 12.+
 
 ## Inspired by and Respect
