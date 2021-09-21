@@ -15,10 +15,24 @@ public protocol ComponentQueryable: ComposeLayoutProvider {
 
 extension ComponentQueryable {
     public func anyComponent(at indexPath: IndexPath) -> AnyComponent? {
-        return self.layout?.sections[indexPath.section].components[indexPath.item].component
+        guard
+            let layout = self.layout,
+            0 <= indexPath.section, indexPath.section < layout.sections.count,
+            0 <= indexPath.item, indexPath.item < layout.sections[indexPath.section].components.count
+        else {
+            return nil
+        }
+        return layout.sections[indexPath.section].components[indexPath.item].component
     }
 
     public func component<T>(at indexPath: IndexPath, to type: T.Type) -> T? {
-        return self.layout?.sections[indexPath.section].components[indexPath.item].component.to(type)
+        guard
+            let layout = self.layout,
+            0 <= indexPath.section, indexPath.section < layout.sections.count,
+            0 <= indexPath.item, indexPath.item < layout.sections[indexPath.section].components.count
+        else {
+            return nil
+        }
+        return layout.sections[indexPath.section].components[indexPath.item].component.to(type)
     }
 }
