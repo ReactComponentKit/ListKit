@@ -81,8 +81,10 @@ public class ComposeRenderer {
     }
     
     public func render(animated: Bool = false, @SectionBuilder sections: () -> [SectionBuilderResult]) {
+        self.unregisterSupplementaryViewsAndClear()
         let compose = ComposeLayout(configuration: configuration, sections: sections)
         self.compose = compose
+        self.registerSupplementaryViews()
         self.dataSource?.layout = self.compose
         self.delegate.layout = self.compose
         self.target?.setCollectionViewLayout(compose.layout, animated: animated)
@@ -90,9 +92,10 @@ public class ComposeRenderer {
     }
     
     public func render<T>(of items: [T], animated: Bool = false, builder: (T) -> NSCollectionLayoutSectionConvertible) {
-        SupplementaryComponentManager.shared.clear()
+        self.unregisterSupplementaryViewsAndClear()
         let compose = ComposeLayout(configuration: configuration, of: items, builder: builder)
         self.compose = compose
+        self.registerSupplementaryViews()
         self.dataSource?.layout = self.compose
         self.delegate.layout = self.compose
         self.target?.setCollectionViewLayout(compose.layout, animated: animated)
@@ -106,6 +109,19 @@ public class ComposeRenderer {
                 diffable.layout = compose
                 diffable.applySnapshot(animated: animated)
             }
+        }
+    }
+    
+    private func unregisterSupplementaryViewsAndClear() {
+        SupplementaryComponentManager.shared.supplementaryComponentMap.keys.forEach { kind in
+            self.target?.unregisterSupplementaryView(kind: kind, withReuseIdentifier: kind)
+        }
+        SupplementaryComponentManager.shared.clear()
+    }
+
+    private func registerSupplementaryViews() {
+        SupplementaryComponentManager.shared.supplementaryComponentMap.keys.forEach { kind in
+            self.target?.register(ListKitReusableView.self, forSupplementaryViewOfKind: kind, withReuseIdentifier: kind)
         }
     }
 }

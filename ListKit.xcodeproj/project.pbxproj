@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4E687B3326FA268700E7DA32 /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E687B3226FA268700E7DA32 /* UICollectionViewExtensions.swift */; };
 		4E9AB97226F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AB97126F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift */; };
 		4E9AB97426F74BD800A53CBD /* ListKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AB97326F74BD800A53CBD /* ListKitDelegate.swift */; };
 		OBJ_102 /* ListKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ListKitTests.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E687B3226FA268700E7DA32 /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		4E9AB97126F74BC600A53CBD /* ComponentLifeTimeTrackingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentLifeTimeTrackingDelegate.swift; sourceTree = "<group>"; };
 		4E9AB97326F74BD800A53CBD /* ListKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKitDelegate.swift; sourceTree = "<group>"; };
 		"ListKit::ListKit::Product" /* ListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 			children = (
 				OBJ_24 /* NSObjectExtensions.swift */,
 				OBJ_25 /* ObjectAssociation.swift */,
+				4E687B3226FA268700E7DA32 /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,7 +240,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -248,7 +251,6 @@
 				OBJ_51 /* README.md */,
 				OBJ_52 /* build.sh */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -353,7 +355,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -389,6 +391,7 @@
 				OBJ_64 /* ComposeLayoutProvider.swift in Sources */,
 				OBJ_65 /* ListKitDataSource.swift in Sources */,
 				OBJ_66 /* DiffableDataSource.swift in Sources */,
+				4E687B3326FA268700E7DA32 /* UICollectionViewExtensions.swift in Sources */,
 				OBJ_67 /* PlainDataSource.swift in Sources */,
 				OBJ_68 /* NSObjectExtensions.swift in Sources */,
 				OBJ_69 /* ObjectAssociation.swift in Sources */,
