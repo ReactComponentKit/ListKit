@@ -324,7 +324,7 @@ ListKit only support Swift Package Manager.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ReactComponentKit/ListKit.git", from: "1.1.0"),
+    .package(url: "https://github.com/ReactComponentKit/ListKit.git", from: "1.1.1"),
 ]
 ```
 
