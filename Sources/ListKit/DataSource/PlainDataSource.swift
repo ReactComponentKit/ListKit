@@ -45,7 +45,7 @@ open class PlainDataSource: NSObject, ListKitDataSource, UICollectionViewDataSou
     
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: ListKitReusableView.className, withReuseIdentifier: ListKitReusableView.className, for: indexPath)
+        let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kind, for: indexPath)
         if let anySupplementaryComponent = SupplementaryComponentManager.shared[kind], let contentView = anySupplementaryComponent.contentView() as? UIView {
             
             view.viewWithTag(ListKit.componentContentViewTag)?.removeFromSuperview()

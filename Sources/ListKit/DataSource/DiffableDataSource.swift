@@ -42,7 +42,7 @@ open class DiffableDataSource: ListKitDataSource {
             }
             
             self.dataSource?.supplementaryViewProvider = { (collectionView, kind, indexPath) in
-                let view = collectionView.dequeueReusableSupplementaryView(ofKind: ListKitReusableView.className, withReuseIdentifier: ListKitReusableView.className, for: indexPath)
+                let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kind, for: indexPath)
                 if let anySupplementaryComponent = SupplementaryComponentManager.shared[kind], let contentView = anySupplementaryComponent.contentView() as? UIView {
                     
                     view.viewWithTag(ListKit.componentContentViewTag)?.removeFromSuperview()

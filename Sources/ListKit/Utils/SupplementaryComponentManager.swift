@@ -9,7 +9,7 @@ import Foundation
 
 internal class SupplementaryComponentManager {
     static let shared = SupplementaryComponentManager()
-    private var supplementaryComponentMap: [String: AnySupplementaryComponent] = [:]
+    private(set) var supplementaryComponentMap: [String: AnySupplementaryComponent] = [:]
     var decorationComponents: [AnyClass] = []
     
     private init() {
